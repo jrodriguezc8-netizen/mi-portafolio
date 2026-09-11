@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida | Jesus Rodriguez Caro</title>
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Fuente moderna -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Barra de progreso de scroll -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Fondo animado (blobs) -->
+    <div class="background-animation">
+        <span class="blob blob-1"></span>
+        <span class="blob blob-2"></span>
+        <span class="blob blob-3"></span>
+        <span class="blob blob-4"></span>
+    </div>
+
+    <!-- Partículas flotantes -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Botón para cambiar tema (Claro/Oscuro) -->
+    <button id="theme-toggle" class="theme-btn" aria-label="Cambiar tema">
+        <i class="fas fa-moon"></i>
+        <span class="theme-ripple"></span>
+    </button>
+
+    <div class="container">
+
+        <!-- Cabecera del Perfil -->
+        <header class="profile-header">
+            <div class="profile-pic-wrapper">
+                <span class="ring"></span>
+                <span class="ring ring-2"></span>
+                <div class="profile-pic">
+                    <img src="archivos/Recursos%20fotoportada.jpeg" alt="Foto de perfil">
+                </div>
+            </div>
+            <h1 class="typewriter" data-text="Jesus Rodriguez Caro"></h1>
+            <p class="subtitle"><span class="dot"></span> Ingeniero de Software en formación</p>
+            <button id="print-btn" class="print-btn" title="Descargar hoja de vida en PDF">
+                <i class="fas fa-file-pdf"></i>
+                <span>Descargar PDF</span>
+            </button>
+        </header>
+
+        <!-- Menú de Navegación (Pestañas) -->
+        <nav class="tabs">
+            <div class="tab-indicator" id="tabIndicator"></div>
+            <button class="tab-btn active" data-tab="inicio"><i class="fas fa-home"></i><span>Inicio</span></button>
+            <button class="tab-btn" data-tab="experiencia"><i class="fas fa-briefcase"></i><span>Experiencia</span></button>
+            <button class="tab-btn" data-tab="habilidades"><i class="fas fa-cogs"></i><span>Habilidades</span></button>
+            <button class="tab-btn" data-tab="contacto"><i class="fas fa-envelope"></i><span>Contacto</span></button>
+        </nav>
+
+        <!-- Contenido de las Pestañas -->
+        <main class="content">
+
+            <!-- Pestaña: Inicio -->
+            <section id="inicio" class="tab-content active">
+                <h2 class="section-title"><i class="fas fa-user-tie"></i> Sobre Mí</h2>
+                <p class="reveal">Soy estudiante de cuarto semestre de Ingeniería de Software y me apasiona aprender cosas nuevas, especialmente en el área el desarrollo de software. Actualmente trabajo en una IPS en el área administrativa de servicios de salud, donde he adquirido experiencia en organización, atención y manejo de información. Me considero una persona responsable, con ganas de seguir aprendiendo y mejorar mis habilidades tanto profesionales como personales. Busco seguir creciendo y aplicar mis conocimientos en pequeños proyectos prácticos que me permitan mejorar cada día más. Mi principal objetivo es crear soluciones a los pequeños problemas que se presenta en la sociedad.</p>
+            </section>
+
+            <!-- Pestaña: Experiencia -->
+            <section id="experiencia" class="tab-content">
+                <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Formación</h2>
+                <p class="reveal-sub">(Haz clic en los títulos para ver los detalles)</p>
+
+                <div class="accordion-item reveal active">
+                    <button class="accordion-btn">
+                        <span><i class="fas fa-school accordion-icon"></i> Bachiller académico — Graduado en 2021</span>
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Institución Educativa Pio XII.</p>
+                            <a class="pdf-action-link" href="archivos/Recursos%20diploma%20de%20bachiller.pdf" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-pdf"></i> Ver diploma académico
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item reveal active">
+                    <button class="accordion-btn">
+                        <span><i class="fas fa-calculator accordion-icon"></i> Técnico en Nómina y Prestaciones Sociales</span>
+                        <i class="fas fa-chevron-down chevron"></i>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-inner">
+                            <p>Graduado en 2022, con 4 años de experiencia en el área administrativa de una IPS como digitador.</p>
+                            <a class="pdf-action-link" href="archivos/Recursos%20Tecnico%20en%20nomina%20y%20prestaciones%20sociales.pdf" target="_blank" rel="noopener noreferrer">
+                                <i class="fas fa-file-pdf"></i> Ver certificado
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pestaña: Habilidades -->
+            <section id="habilidades" class="tab-content">
+                <h2 class="section-title"><i class="fas fa-rocket"></i> Mis Habilidades</h2>
+                <div class="skills-grid">
+                    <div class="skill-badge reveal" style="--i:0">
+                        <i class="fas fa-hospital-user"></i>
+                        <span>Área administrativa de servicios de la salud</span>
+                    </div>
+                    <div class="skill-badge reveal" style="--i:1">
+                        <i class="fas fa-bullhorn"></i>
+                        <span>Desarrollo de campañas de promoción en redes sociales</span>
+                    </div>
+                    <div class="skill-badge reveal" style="--i:2">
+                        <i class="fas fa-file-excel"></i>
+                        <span>Manejo de Excel</span>
+                    </div>
+                    <div class="skill-badge learning-badge reveal" style="--i:3">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>En proceso de aprendizaje: HTML y Python</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pestaña: Contacto -->
+            <section id="contacto" class="tab-content">
+                <h2 class="section-title"><i class="fas fa-paper-plane"></i> Contáctame</h2>
+                <div class="contact-links">
+                    <div class="contact-card reveal">
+                        <span class="contact-icon"><img class="phone-logo" src="archivos/Recursos%20logo%20de%20telefono.jpeg" alt="Teléfono"></span>
+                        <span class="contact-info">
+                            <small>Teléfono</small>
+                            <strong>3148788346</strong>
+                        </span>
+                    </div>
+                    <div class="contact-card reveal">
+                        <span class="contact-icon"><img class="email-logo" src="archivos/Recursos%20logo%20de%20correo.jpeg" alt="Correo electrónico"></span>
+                        <span class="contact-info">
+                            <small>Correo electrónico</small>
+                            <strong>jesuroca067@gmail.com</strong>
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="footer">
+            <p>Jesus Rodriguez Caro</p>
+        </footer>
+    </div>
+
+    <!-- Generador de PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Lógica JavaScript -->
+    <script src="Estructura.js"></script>
+</body>
+</html>
